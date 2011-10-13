@@ -6,10 +6,11 @@ require 'rake'
 require 'spec/rake/spectask'
 require 'roodi'
 
-Hoe.new('roodi', Roodi::VERSION) do |p|
-  p.developer('Marty Andrews', 'marty@cogentconsulting.com.au')
-  p.extra_deps = ['ruby_parser']
-  p.remote_rdoc_dir = ''
+Hoe.plugin :gemspec
+Hoe.spec 'roodi' do
+  developer('Marty Andrews', 'marty@cogentconsulting.com.au')
+  extra_deps << 'ruby_parse'
+  remote_rdoc_dir = ''
 end
 
 def roodi(ruby_files)
