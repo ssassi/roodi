@@ -9,7 +9,7 @@ require 'roodi'
 Hoe.plugin :gemspec
 Hoe.spec 'roodi' do
   developer('Marty Andrews', 'marty@cogentconsulting.com.au')
-  extra_deps << 'ruby_parse'
+  extra_deps << 'ruby_parser'
   remote_rdoc_dir = ''
 end
 
